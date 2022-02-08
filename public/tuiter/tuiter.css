@@ -1,0 +1,302 @@
+a:active,
+a:hover,
+a:link,
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+* {
+  font-family: "Montserrat", sans-serif;
+}
+.wd-container {
+  background-color: black;
+  border: 1px solid rgb(47, 51, 54);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  /* padding: 10px; */
+}
+
+.wd-section-container {
+  padding: 12px 16px 5px;
+  max-width: 100%;
+}
+.wd-ntp {
+  padding-top: 0px;
+}
+.wd-section-container > .wd-section-header {
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  color: #fff;
+  font-weight: 600;
+  padding-bottom: 7px;
+}
+.wd-section-container > .wd-section-header > .wd-section-subtitle {
+  font-size: 13px;
+  color: rgb(161, 164, 167);
+  font-weight: normal;
+}
+.wd-search-container .wd-search {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.wd-bottom-border {
+  border-bottom: 1px solid rgb(87, 91, 94);
+}
+.wd-search #search-box {
+  border-radius: 15px;
+  padding: 5px 10px;
+  background-color: darkgray;
+  color: white;
+  border: 1px solid transparent;
+  width: 80%;
+  height: 25px;
+}
+
+.wd-search #search-box:focus {
+  outline: none;
+  border: 1px solid #65c9fc;
+}
+
+.wd-search a {
+  font-size: 20px;
+  color: rgb(29, 161, 242);
+}
+.wd-tab-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  overflow-x: auto;
+  /* width: 100%; */
+}
+.wd-tab-container .wd-tab a {
+  text-decoration: none;
+  color: rgb(110, 118, 125);
+}
+
+.wd-tab a:active,
+.wd-tab a:hover,
+.wd-tab a:link,
+.wd-tab a:visited {
+  color: rgb(110, 118, 125);
+}
+.wd-tab-container .wd-tab {
+  color: rgb(110, 118, 125);
+  margin: 0px 26px;
+  white-space: nowrap;
+  font-size: 15px;
+  padding: 16px 0px;
+  border-bottom: 3px transparent solid;
+}
+.wd-tab-container .wd-tab.wd-active a {
+  color: rgb(29, 161, 242) !important;
+}
+.wd-tab-container .wd-tab:hover a {
+  color: rgb(29, 161, 242) !important;
+}
+.wd-tab-container .wd-tab.wd-active {
+  border-bottom: 3px rgb(29, 161, 242) solid;
+  /* padding-bottom: 8px; */
+}
+.wd-tab-container .wd-tab:hover {
+  border-bottom: 3px rgb(29, 161, 242) solid;
+}
+
+.wd-suggested-posts .wd-suggestion {
+  /* border: 1px solid rgb(47, 51, 54); */
+  box-shadow: 1px 0 0 0 rgb(47, 51, 54), 0 1px 0 0 rgb(47, 51, 54),
+    1px 1px 0 0 rgb(47, 51, 54),
+    /* Just to fix the corner */ 1px 0 0 0 rgb(47, 51, 54) inset,
+    0 1px 0 0 rgb(47, 51, 54) inset;
+  color: white;
+  padding: 8px 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+.wd-suggested-posts .wd-suggestion:hover {
+  background-color: rgba(172, 172, 172, 0.3);
+}
+.wd-suggested-posts .wd-suggestion .wd-suggestion-type {
+  font-size: 13px;
+  color: rgb(110, 118, 125);
+}
+.wd-suggestion .wd-title {
+  font-weight: bold;
+  color: white;
+  font-size: 18px;
+  padding: 2px 0px 10px;
+}
+.wd-suggestion .wd-author {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.wd-suggestion .wd-author .wd-time {
+  color: rgb(110, 118, 125);
+  /* font-size: 10px; */
+}
+.wd-suggestion .wd-author .wd-time::before {
+  content: "\00a0- ";
+}
+
+.wd-suggestion .wd-author {
+  font-size: 13px;
+  color: white;
+}
+.wd-suggestion .wd-tweet-count {
+  color: rgb(110, 118, 125);
+  font-size: 13px;
+}
+
+.wd-suggestion .wd-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.wd-suggestion .wd-image {
+  width: 100px;
+  height: 100px;
+  min-width: 100px;
+  min-height: 100px;
+  border-radius: 20px;
+}
+
+.wd-suggestion .wd-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+}
+
+.wd-bookmark {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  color: rgb(255, 255, 255);
+  transition: all 0.5s ease-in-out;
+  padding: 12px 0px;
+}
+
+.wd-bookmark .wd-avatar {
+  flex: 0 0 inherit;
+  /* max-width: 56px; */
+}
+
+.wd-bookmark .wd-avatar img {
+  width: 48px;
+  height: 48px;
+  border-radius: 24px;
+}
+
+.wd-bookmark .wd-bookmark-content {
+  margin-left: 12px;
+  /* margin-bottom: 12px; */
+}
+
+.wd-bookmark .wd-bookmark-content .wd-bookmark-author {
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
+  display: flex;
+  flex-direction: row;
+}
+
+.wd-bookmark .wd-bookmark-content .wd-bookmark-author .wd-handle,
+.wd-bookmark .wd-bookmark-content .wd-bookmark-author .wd-post-date {
+  font-weight: normal;
+  color: rgb(161, 164, 167);
+  margin-left: 5px;
+}
+
+.wd-bookmark .wd-bookmark-content .wd-bookmark-author .wd-handle::after {
+  content: "\000020•\000020";
+}
+
+.wd-bookmark .wd-bookmark-content .wd-bookmark-text {
+  padding: 5px 0px 0px;
+  font-size: 15px;
+  max-width: 506px;
+  margin-bottom: 12px;
+}
+
+.wd-bookmark .wd-bookmark-content .wd-bookmark-preview {
+  display: flex;
+  flex-direction: column;
+  /* border-top-left-radius: 10px;
+  border-top-right-radius: 10px; */
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  color: rgb(161, 164, 167);
+  border: 1px solid rgb(87, 91, 94);
+  max-width: 504px;
+}
+
+.wd-bookmark .wd-bookmark-content .wd-bookmark-preview:hover {
+  background-color: rgba(172, 172, 172, 0.3);
+}
+.wd-bookmark .wd-bookmark-content .wd-bookmark-preview img {
+  width: 504px;
+  height: 264px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.wd-bookmark-preview-content {
+  padding: 12px;
+}
+.wd-bookmark
+  .wd-bookmark-content
+  .wd-bookmark-preview
+  .wd-bookmark-preview-content
+  .wd-bookmark-preview-title {
+  padding: 0px 0px 5px;
+  font-size: 15px;
+  color: white;
+  font-weight: bold;
+}
+
+.wd-bookmark .wd-bookmark-content .wd-bookmark-actions {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.wd-bookmark .wd-bookmark-content .wd-bookmark-actions .wd-bookmark-action {
+  max-width: 100px;
+  width: auto;
+  font-size: 20px;
+  padding: 0px 16px;
+  color: rgb(168, 164, 164);
+  transition: all 0.4s ease-in-out;
+}
+
+.wd-bookmark
+  .wd-bookmark-content
+  .wd-bookmark-actions
+  .wd-bookmark-action:hover {
+  color: white;
+}
+
+.wd-bookmark .wd-bookmark-content .wd-bookmark-actions .wd-bookmark-action a {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.wd-bookmark-action .wd-icon {
+  margin-right: 12px;
+}
+
+.wd-bookmark
+  .wd-bookmark-content
+  .wd-bookmark-actions
+  .wd-bookmark-action.wd-active.wd-like {
+  color: red;
+}
