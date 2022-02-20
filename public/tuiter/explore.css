@@ -1,0 +1,176 @@
+.fa-stack.small {
+  font-size: 0.5em;
+  width: 2em;
+}
+i {
+  vertical-align: middle;
+}
+.form-group .form-control {
+  padding-left: 2.375rem;
+}
+.form-group .form-control-icon {
+  position: absolute;
+  z-index: 2;
+  display: block;
+  width: 2.375rem;
+  height: 2.375rem;
+  line-height: 2.275rem;
+  text-align: center;
+  pointer-events: none;
+  color: #aaa;
+}
+.search-box {
+  border-radius: 15px;
+}
+.wd-search .search-action {
+  font-size: 25px;
+}
+/* .showcase-header {
+  background: url("https://techcrunch.com/wp-content/uploads/2019/09/Starship-Mk1-Day.jpg");
+  max-height: 300px;
+  height: 300px;
+  background-size: cover;
+} */
+
+a {
+  text-decoration: none;
+}
+
+.carousel-caption {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding-bottom: 0.5rem;
+  padding-left: 0.5rem;
+  color: #fff;
+  text-align: left;
+}
+img.follow-suggestion-avatar {
+  width: 100%;
+  max-width: 50px;
+  max-height: 50px;
+  width: 50px;
+  height: 50px;
+}
+
+img.post-image {
+  max-width: 100px;
+  max-height: 100px;
+  width: 100px;
+  height: 100px;
+  border-radius: 12px;
+}
+
+/*
+Challenge related styles
+*/
+
+body {
+  background-color: var(--bs-dark);
+  color: var(--bs-light);
+}
+.list-group-item {
+  background-color: var(--bs-dark);
+  color: var(--bs-light);
+  border: 1px solid rgba(var(--bs-light-rgb), 0.125);
+}
+a,
+a:hover,
+a:visited,
+a:link {
+  color: var(--bs-light);
+}
+
+.fa-inverse {
+  color: var(--bs-dark) !important;
+}
+
+.nav-tabs {
+  border-bottom: 0px solid #666;
+}
+
+.nav-tabs .nav-link {
+  color: rgba(var(--bs-light-rgb), 0.4);
+}
+
+.nav-link:focus,
+.nav-link:hover {
+  color: var(--bs-light);
+}
+
+.nav-tabs .nav-link:hover,
+.nav-tabs .nav-link:focus {
+  border-color: transparent;
+  border-bottom: 3px rgb(29, 161, 242) solid;
+}
+
+.nav-tabs .nav-link.active {
+  color: var(--bs-light);
+  background-color: transparent;
+  border-color: transparent;
+  border-bottom: 3px rgb(29, 161, 242) solid;
+}
+
+.form-control {
+  background-color: rgba(var(--bs-light-rgb), 0.05);
+  border: 0px;
+  color: var(--bs-light);
+}
+
+.form-control:focus {
+  color: var(--bs-light);
+  background-color: rgba(var(--bs-light-rgb), 0.05);
+}
+
+.list-group-item {
+  border-color: transparent;
+}
+.list-group-item-action {
+  color: rgba(var(--bs-light-rgb), 0.5) !important;
+  border-color: transparent;
+}
+.list-group-item.active {
+  color: var(--bs-light) !important;
+  background-color: transparent;
+  border-color: transparent;
+}
+.list-group-item-action:hover,
+.list-group-item-action:active,
+.list-group-item-action:focus {
+  color: var(--bs-light) !important;
+  background-color: transparent;
+}
+.border {
+  border: 1px solid rgba(var(--bs-light-rgb), 0.2) !important;
+}
+
+.border-start {
+  border-left: 1px solid rgba(var(--bs-light-rgb), 0.2) !important;
+}
+
+.border-end {
+  border-right: 1px solid rgba(var(--bs-light-rgb), 0.2) !important;
+}
+
+.btn.tuit {
+  color: var(--bs-light);
+  background-color: #1e9bf0;
+  border-color: #1e9bf0;
+}
+
+.btn-primary {
+  color: var(--bs-dark);
+  background-color: var(--bs-light);
+  border-color: var(--bs-light);
+}
+.who-to-follow {
+  border-radius: 20px;
+}
+.who-to-follow > .list-group-item {
+  background-color: rgba(var(--bs-light-rgb), 0.05);
+}
+.btn-primary:hover {
+  color: #fff;
+  background-color: #1e9bf0;
+  border-color: #1e9bf0;
+}
