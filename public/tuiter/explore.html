@@ -7,96 +7,389 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="tuiter.css" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="explore.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <div class="wd-container">
-      <div class="wd-section-container wd-search-container">
-        <form action="">
-          <div class="wd-search">
-            <input
-              type="text"
-              name=""
-              id="search-box"
-              placeholder="🔍 Search Tuiter"
-            />
-            <a href="explore-settings.html">
-              &#9881;
-              <!-- <img
-                src=""
-                alt=""
-                class="wd-settings-icon"
-                width="20px"
-                height="20px"
-            /> -->
+    <div class="container mt-2">
+      <div class="row">
+        <div class="col-2">
+          <div class="list-group mb-3">
+            <a class="list-group-item d-flex justify-content-center justify-content-xl-start align-items-center">
+              <i class="fab fa-twitter"></i>
             </a>
+            <a href="#" class="list-group-item list-group-item-action d-flex justify-content-center justify-content-xl-start align-items-center"
+              ><i class="fa fa-home me-0 me-xl-2"></i><span class="d-none d-xl-inline-block">Home</span></a
+            >
+            <a
+              href="#"
+              class="list-group-item list-group-item-action active d-flex justify-content-center justify-content-xl-start align-items-center"
+              aria-current="true"
+              ><i class="fa fa-hashtag me-0 me-xl-2"></i><span class="d-none d-xl-inline-block">Explore</span></a
+            >
+            <a href="#" class="list-group-item list-group-item-action d-flex justify-content-center justify-content-xl-start align-items-center"
+              ><i class="fa fa-bell me-0 me-xl-2"></i><span class="d-none d-xl-inline-block">Notifications</span></a
+            >
+            <a href="#" class="list-group-item list-group-item-action d-flex justify-content-center justify-content-xl-start align-items-center"
+              ><i class="fa fa-envelope me-0 me-xl-2"></i><span class="d-none d-xl-inline-block">Messages</span></a
+            >
+            <a href="#" class="list-group-item list-group-item-action d-flex justify-content-center justify-content-xl-start align-items-center"
+              ><i class="fa fa-bookmark me-0 me-xl-2"></i><span class="d-none d-xl-inline-block">Bookmarks</span></a
+            >
+            <a href="#" class="list-group-item list-group-item-action d-flex justify-content-center justify-content-xl-start align-items-center"
+              ><i class="fa fa-list me-0 me-xl-2"></i><span class="d-none d-xl-inline-block">Lists</span></a
+            >
+            <a href="#" class="list-group-item list-group-item-action d-flex justify-content-center justify-content-xl-start align-items-center"
+              ><i class="fa fa-user me-0 me-xl-2"></i><span class="d-none d-xl-inline-block">Profile</span></a
+            >
+            <a href="#" class="list-group-item list-group-item-action d-flex justify-content-center justify-content-xl-start align-items-center"
+              ><span class="fa-stack small me-0 me-xl-2">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fas fa-ellipsis-h fa-stack-1x fa-inverse"></i> </span
+              ><span class="d-none d-xl-inline-block">More</span></a
+            >
           </div>
-        </form>
-      </div>
-      <div class="wd-section-container wd-tab-container">
-        <div class="wd-tab wd-active"><a href="">For you</a></div>
-        <div class="wd-tab"><a href="">Trending</a></div>
-        <div class="wd-tab"><a href="">COVID-19</a></div>
-        <div class="wd-tab"><a href="">News</a></div>
-        <div class="wd-tab"><a href="">Sports</a></div>
-        <div class="wd-tab"><a href="">Entertainment</a></div>
-      </div>
-      <div class="wd-section-container wd-suggested-posts">
-        <div class="wd-suggestion">
-          <div class="wd-content">
-            <div class="wd-suggestion-type">Trending in Movies</div>
-            <div class="wd-title">Avengers: Endgame</div>
-            <div class="wd-tweet-count">2.5B Tuits</div>
+
+          <button type="button" class="btn btn-primary rounded-pill w-100">
+            Tweet
+          </button>
+        </div>
+        <div class="col-10 col-lg-6 wd-container">
+          <div class="wd-section-container wd-search-container mb-3">
+            <form action="">
+              <div
+                class="wd-search d-flex justify-content-between align-items-center"
+              >
+                <div class="form-group w-75">
+                  <i class="fa fa-search form-control-icon"></i>
+                  <input
+                    type="text"
+                    class="form-control search-box"
+                    placeholder="Search"
+                  />
+                </div>
+                <a
+                  href="explore-settings.html"
+                  class="search-action d-flex justify-content-between align-items-center"
+                  ><i class="fa fa-cog"></i
+                ></a>
+              </div>
+            </form>
+          </div>
+          <div class="wd-section-container wd-tab-container mb-3">
+            <ul class="nav nav-tabs">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="for-you.html"
+                  >For you</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="trending.html">Trending</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="news.html">News</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="sports.html">Sports</a>
+              </li>
+              <li class="nav-item d-none d-md-block">
+                <a class="nav-link" href="entertainment.html">Entertainment</a>
+              </li>
+            </ul>
+          </div>
+          <div class="wd-section-container">
+            <div class="container-fluid p-0 showcase-header">
+              <div
+                class="carousel slide"
+                data-ride="carousel"
+              >
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img
+                      src="https://techcrunch.com/wp-content/uploads/2019/09/Starship-Mk1-Day.jpg"
+                      alt="starship"
+                      class="img-fluid showcase-image d-block w-100"
+                    />
+
+                    <p class="h2 carousel-caption">SpaceX's Starship</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="wd-section-container wd-suggested-posts">
+            <ul class="list-group">
+              <li
+                class="list-group-item d-flex justify-content-between align-items-center"
+              >
+                <div class="ms-1 me-auto mb-auto">
+                  <div class="text-muted"><small>Web Development</small></div>
+                  <div>
+                    <span class="fw-bold">ReactJS</span>
+                    <span class="fa-stack small">
+                      <i class="fas fa-circle fa-stack-2x"></i>
+                      <i class="fas fa-check fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <span class="text-muted">- 2h</span>
+                  </div>
+                  <div class="fw-bold">React.js is a component based front end library that makes it very easy to build Single Page Applications or SPAs</div>
+                </div>
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRye0H0xrFuy5NL8B7hzObWUh7ERoU4z-jyOg&usqp=CAU"
+                  alt=""
+                  class="img-fluid post-image rounded"
+                />
+              </li>
+              <li
+                class="list-group-item d-flex justify-content-between align-items-center"
+              >
+                <div class="ms-1 me-auto mb-auto">
+                  <div>
+                    <span class="fw-bold">JavaScript</span>
+                    <span class="fa-stack small">
+                      <i class="fas fa-circle fa-stack-2x"></i>
+                      <i class="fas fa-check fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <span class="text-muted">- 2h</span>
+                  </div>
+                  <div class="fw-bold">JavaScript is a programming language that can be run on browsers as well as desktops</div>
+                  <div class="text-muted">123K Tweets</div>
+                </div>
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/2048px-Unofficial_JavaScript_logo_2.svg.png"
+                  alt=""
+                  class="img-fluid post-image "
+                />
+              </li>
+              <li
+                class="list-group-item d-flex justify-content-between align-items-center"
+              >
+                <div class="ms-1 me-auto mb-auto">
+                  <div class="text-muted"><small>Web Development</small></div>
+                  <div>
+                    <span class="fw-bold">jQuery</span>
+                  </div>
+                  <div class="text-muted">123K Tweets</div>
+                </div>
+                <img
+                  src="https://openjsf.org/wp-content/uploads/sites/84/2019/10/jquery-logo-vertical_large_square.png"
+                  alt=""
+                  class="img-fluid post-image "
+                />
+              </li>
+              
+              <li
+                class="list-group-item d-flex justify-content-between align-items-center"
+              >
+                <div class="ms-1 me-auto mb-auto">
+                  <div class="text-muted"><small>Web Development</small></div>
+                  <div>
+                    <span class="fw-bold">NodeJS</span>
+                    <span class="fa-stack small">
+                      <i class="fas fa-circle fa-stack-2x"></i>
+                      <i class="fas fa-check fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <span class="text-muted">- 2h</span>
+                  </div>
+                  <div class="text-muted">123K Tweets</div>
+                </div>
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfOfptrC48Ggz3JC23XVvfUc6qPqMrkrGGZ5ajLqLDARAP15-8lnl4ETCV_BNdMoW7TjU&usqp=CAU"
+                  alt=""
+                  class="img-fluid post-image "
+                />
+              </li>
+            </ul>
+            <!-- <div class="wd-suggestion">
+              <div class="wd-content">
+                <div class="wd-suggestion-type">Trending in Movies</div>
+                <div class="wd-title">Avengers: Endgame</div>
+                <div class="wd-tweet-count">2.5B Tuits</div>
+              </div>
+            </div>
+            <div class="wd-suggestion">
+              <div class="wd-content">
+                <div class="wd-author">
+                  🌎 New York Times
+                  <div class="wd-time">Yesterday</div>
+                </div>
+                <div class="wd-title">
+                  Omicron waves appear to slow in New York City
+                </div>
+              </div>
+              <div class="wd-image"><img src="100x100.png" alt="" /></div>
+            </div>
+            <div class="wd-suggestion">
+              <div class="wd-content">
+                <div class="wd-suggestion-type">COVID-19 - LIVE</div>
+                <div class="wd-title">
+                  COVID-19: News and updates for Massachusetts
+                </div>
+              </div>
+              <div class="wd-image"><img src="100x100.png" alt="" /></div>
+            </div>
+            <div class="wd-suggestion">
+              <div class="wd-content">
+                <div class="wd-author">
+                  📰 Boston Herald
+                  <div class="wd-time">Today</div>
+                </div>
+                <div class="wd-title">
+                  Freezing rain expected in isolated parts of Boston today
+                </div>
+              </div>
+              <div class="wd-image"><img src="100x100.png" alt="" /></div>
+            </div>
+            <div class="wd-suggestion">
+              <div class="wd-content">
+                <div class="wd-suggestion-type">Trending in Studies</div>
+                <div class="wd-title">
+                  Northeastern's Web Development course
+                </div>
+                <div class="wd-tweet-count">100K Tuits</div>
+              </div>
+            </div>
+            <div class="wd-suggestion">
+              <div class="wd-content">
+                <div class="wd-suggestion-type">World news - LIVE</div>
+                <div class="wd-title">
+                  US deploys troops to Europe amid rising tensions over Russia
+                  and Ukraine
+                </div>
+              </div>
+              <div class="wd-image"><img src="100x100.png" alt="" /></div>
+            </div> -->
           </div>
         </div>
-        <div class="wd-suggestion">
-          <div class="wd-content">
-            <div class="wd-author">
-              🌎 New York Times
-              <div class="wd-time">Yesterday</div>
-            </div>
-            <div class="wd-title">
-              Omicron waves appear to slow in New York City
-            </div>
-          </div>
-          <div class="wd-image"><img src="100x100.png" alt="" /></div>
-        </div>
-        <div class="wd-suggestion">
-          <div class="wd-content">
-            <div class="wd-suggestion-type">COVID-19 - LIVE</div>
-            <div class="wd-title">
-              COVID-19: News and updates for Massachusetts
-            </div>
-          </div>
-          <div class="wd-image"><img src="100x100.png" alt="" /></div>
-        </div>
-        <div class="wd-suggestion">
-          <div class="wd-content">
-            <div class="wd-author">
-              📰 Boston Herald
-              <div class="wd-time">Today</div>
-            </div>
-            <div class="wd-title">
-              Freezing rain expected in isolated parts of Boston today
-            </div>
-          </div>
-          <div class="wd-image"><img src="100x100.png" alt="" /></div>
-        </div>
-        <div class="wd-suggestion">
-          <div class="wd-content">
-            <div class="wd-suggestion-type">Trending in Studies</div>
-            <div class="wd-title">Northeastern's Web Development course</div>
-            <div class="wd-tweet-count">100K Tuits</div>
-          </div>
-        </div>
-        <div class="wd-suggestion">
-          <div class="wd-content">
-            <div class="wd-suggestion-type">World news - LIVE</div>
-            <div class="wd-title">
-              US deploys troops to Europe amid rising tensions over Russia and Ukraine
-            </div>
-          </div>
-          <div class="wd-image"><img src="100x100.png" alt="" /></div>
+        <div class="col-lg-4 d-none d-lg-block">
+          <ul class="list-group">
+            <li
+              class="list-group-item d-flex justify-content-between align-items-center fw-bold"
+            >
+              Who to follow
+            </li>
+            <li
+              class="list-group-item d-flex justify-content-between align-items-center"
+            >
+              <img
+                src="https://e7.pngegg.com/pngimages/510/15/png-clipart-java-programming-computer-programming-programming-language-android-coffee-jar-text-logo.png"
+                alt=""
+                class="img-fluid rounded-circle follow-suggestion-avatar"
+              />
+              <div class="ms-2 me-auto">
+                <div class="fw-bold">
+                  Java
+                  <span class="fa-stack small me-2">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fas fa-check fa-stack-1x fa-inverse"></i>
+                  </span>
+                </div>
+                @Java
+              </div>
+              <button type="button" class="btn btn-primary rounded-pill">
+                Follow
+              </button>
+            </li>
+            <li
+              class="list-group-item d-flex justify-content-between align-items-center"
+            >
+              <img
+                src="https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,f_auto,q_auto:eco,dpr_1/j3dbh6kok0dket3uz2vy"
+                alt=""
+                class="img-fluid rounded-circle follow-suggestion-avatar"
+              />
+              <div class="ms-2 me-auto">
+                <div class="fw-bold">
+                  Relativity Space
+                  <span class="fa-stack small me-2">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fas fa-check fa-stack-1x fa-inverse"></i>
+                  </span>
+                </div>
+                @relativityspace
+              </div>
+              <button type="button" class="btn btn-primary rounded-pill">
+                Follow
+              </button>
+            </li>
+            <li
+              class="list-group-item d-flex justify-content-between align-items-center"
+            >
+              <img
+                src="https://cdn.freebiesupply.com/logos/large/2x/virgin-1-logo-svg-vector.svg"
+                alt=""
+                class="img-fluid rounded-circle follow-suggestion-avatar"
+              />
+              <div class="ms-2 me-auto">
+                <div class="fw-bold">
+                  Virgin Galactic
+                  <span class="fa-stack small me-2">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fas fa-check fa-stack-1x fa-inverse"></i>
+                  </span>
+                </div>
+                @virgingalactic
+              </div>
+              <button type="button" class="btn btn-primary rounded-pill">
+                Follow
+              </button>
+            </li>
+            <li
+              class="list-group-item d-flex justify-content-between align-items-center"
+            >
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/NASA_logo.svg/2449px-NASA_logo.svg.png"
+                alt=""
+                class="img-fluid rounded-circle follow-suggestion-avatar"
+              />
+              <div class="ms-2 me-auto">
+                <div class="fw-bold">
+                  NASA
+                  <span class="fa-stack small me-2">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fas fa-check fa-stack-1x fa-inverse"></i>
+                  </span>
+                </div>
+                @NASA
+              </div>
+              <button type="button" class="btn btn-primary rounded-pill">
+                Follow
+              </button>
+            </li>
+            <li
+              class="list-group-item d-flex justify-content-between align-items-center"
+            >
+              <img
+                src="https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2020/06/931/524/TESLA-LOGO.jpg?ve=1&tl=1"
+                alt=""
+                class="img-fluid rounded-circle follow-suggestion-avatar"
+              />
+              <div class="ms-2 me-auto">
+                <div class="fw-bold">
+                  Tesla
+                  <span class="fa-stack small me-2">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fas fa-check fa-stack-1x fa-inverse"></i>
+                  </span>
+                </div>
+                @tesla
+              </div>
+              <button type="button" class="btn btn-primary rounded-pill">
+                Follow
+              </button>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
