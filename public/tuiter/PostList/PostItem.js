@@ -7,15 +7,20 @@ const PostItem = (post) => {
       <img src="${post.avatarImage}" alt="" class="img-fluid" />
     </div>
     <div class="wd-bookmark-content">
-      <div class="wd-bookmark-author fw-bold d-flex align-items-center">
-        ${post.userName}
-        ${post.verified ? `
-        <span class="fa-stack small ms-1">
-          <i class="fas fa-certificate fa-stack-2x"></i>
-          <i class="fas fa-check fa-stack-1x fa-inverse"></i>
-        </span>` : ``}
-        <div class="wd-handle text-muted ms-1">@${post.handle}</div>
-        <div class="wd-post-date text-muted ms-1">${post.time}</div>
+      <div class="d-flex justify-content-between w-100">
+        <div class="wd-bookmark-author fw-bold d-flex align-items-center">
+          ${post.userName}
+          ${post.verified ? `
+          <span class="fa-stack small ms-1">
+            <i class="fas fa-certificate fa-stack-2x"></i>
+            <i class="fas fa-check fa-stack-1x fa-inverse"></i>
+          </span>` : ``}
+          <div class="wd-handle text-muted ms-1">@${post.handle}</div>
+          <div class="wd-post-date text-muted ms-1">${post.time}</div>
+        </div>
+        <div>
+          <i class="fas fa-ellipsis-h text-muted"></i>
+        </div>
       </div>
       <div class="wd-bookmark-text pt-1">
         ${post.content}
@@ -33,7 +38,7 @@ const PostItem = (post) => {
               `
             <div class="card-body">
               <h6 class="card-title">${post.preview.title}</h6>
-              <p class="card-text">${post.preview.description}</p>
+              <p class="card-text mb-1">${post.preview.description}</p>
               <p class="card-text d-flex align-items-center">
               <i class="fa fa-link"></i> <span class="ms-2">${post.preview.link}</span></p>
             </div>
@@ -65,7 +70,7 @@ const PostItem = (post) => {
         <div class="wd-bookmark-action">
           <a href="#" class="d-flex justify-content-between">
             <div class="wd-icon d-flex align-items-center"><i class="fas fa-upload"></i></div>
-            <div class="stat"></div>
+            <div class="stat">${'&nbsp;'}</div>
           </a>
         </div>
       </div>

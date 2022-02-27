@@ -54,6 +54,10 @@ a {
 .posts .list-group-item {
   border-bottom: 1px solid rgb(68, 68, 68);
 }
+
+.card-body {
+  border-top: 1px solid rgb(87, 91, 94);
+}
 .wd-bookmark .wd-bookmark-action a {
   color: unset;
 }
@@ -143,6 +147,10 @@ a {
 
 .wd-bookmark-action .wd-icon {
   margin-right: 12px;
+}
+
+.stat {
+  width: 60px;
 }
 /*
 
