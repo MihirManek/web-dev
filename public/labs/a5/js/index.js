@@ -58,24 +58,34 @@ if (!false1) {
   console.log("false1");
 }
 
+console.log("Ternary conditional operator");
 const loggedIn = true;
 const greeting = loggedIn ? "Welcome!" : "Please login";
 console.log(greeting);
 
+
+console.log("Legacy ES5 function");
 function add(a, b) {
   return a + b;
 }
 const twoPlusFour = add(2, 4);
 console.log(twoPlusFour);
 
+console.log("New ES6 functions");
 const subtract = (a, b) => {
   return a - b;
 };
 const threeMinusOne = subtract(3, 1);
 console.log(threeMinusOne);
+
+
+console.log("Implied return");
 const multiply = (a, b) => a * b;
 const fourTimesFive = multiply(4, 5);
 console.log(fourTimesFive);
+
+
+console.log("Parenthesis and parameters");
 const square = (a) => a * a;
 const plusOne = (a) => a + 1;
 const twoSquared = square(2);
@@ -114,6 +124,7 @@ stringArray1.splice(1, 1);
 console.log(numberArray1);
 console.log(stringArray1);
 
+console.log("For loops");
 for (let i = 0; i < stringArray1.length; i++) {
   const string1 = stringArray1[i];
   console.log(string1);
