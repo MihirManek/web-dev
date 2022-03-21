@@ -13,7 +13,7 @@ export default [
   },
   {
     avatarIcon:
-      "https://cdn.freebiesupply.com/logos/large/2x/virgin-1-logo-svg-vector.svg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Virgin-logo.svg/1170px-Virgin-logo.svg.png",
     userName: "Virgin Galactic",
     handle: "virgingalactic",
   },
