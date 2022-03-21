@@ -10,7 +10,7 @@ const posts = [
       "Amazing show about <a href='https://twitter.com/inspiration4x' target='_blank'>@Inspiration4x</a> mission!",
     preview: {
       image:
-        "https://pbs.twimg.com/card_img/1494914144826499072/LSbNuftg?format=jpg&name=small",
+        "https://pbs.twimg.com/card_img/1502243770347266050/Q_aXHNnt?format=jpg&name=240x240",
       title: "Countdown: Inspiration4 Mission to Space | Netflix Official Site",
       description:
         "From training to launch to landing, this all-access docuseries rides along with the Inspiration4 crew on the first all-civilian orbital space mission.",
