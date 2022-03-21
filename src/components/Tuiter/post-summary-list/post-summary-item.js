@@ -19,7 +19,7 @@ const PostSummaryItem = ({
         </div>
         <div>
           <span className="fw-bold">{post.userName}</span>
-          <span className="fa-stack small">
+          <span className="fa-stack small mx-1">
             <i className="fas fa-circle fa-stack-2x"></i>
             <i className="fas fa-check fa-stack-1x fa-inverse"></i>
           </span>

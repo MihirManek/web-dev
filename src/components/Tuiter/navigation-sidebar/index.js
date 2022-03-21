@@ -1,16 +1,17 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./NavigationSidebar.css";
 
 const links = [
   {
     id: "home",
-    path: "../HomeScreen/home.html",
+    path: "/tuiter/home",
     label: "Home",
     icon: "fa fa-home",
   },
   {
     id: "explore",
-    path: "../ExploreScreen/explore.html",
+    path: "/tuiter/explore",
     label: "Explore",
     icon: "fa fa-hashtag",
   },
@@ -50,13 +51,13 @@ const NavigationSidebar = ({ active = "explore" }) => {
   return (
     <>
       <div className="list-group">
-        <a className="list-group-item" href="/">
+        <Link className="list-group-item" to="/">
           <i className="fab fa-twitter"></i>
-        </a>
+        </Link>
         {links.map((l) => (
-          <a
+          <Link
             key={l.id}
-            href={l.path || "#"}
+            to={l.path || ""}
             className={`list-group-item list-group-item-action d-flex justify-content-center justify-content-xl-start align-items-center ${
               l.id === active ? "active" : ""
             }`}
@@ -64,10 +65,10 @@ const NavigationSidebar = ({ active = "explore" }) => {
           >
             <i className={`${l.icon} me-0 me-xl-2`}></i>
             <span className="d-none d-xl-inline-block">{l.label}</span>
-          </a>
+          </Link>
         ))}
-        <a
-          href="#"
+        <Link
+          to=""
           className="list-group-item list-group-item-action d-flex justify-content-center justify-content-xl-start align-items-center"
         >
           <span className="fa-stack small me-0 me-xl-2">
@@ -75,7 +76,7 @@ const NavigationSidebar = ({ active = "explore" }) => {
             <i className="fas fa-ellipsis-h fa-stack-1x fa-inverse"></i>{" "}
           </span>
           <span className="d-none d-xl-inline-block">More</span>
-        </a>
+        </Link>
       </div>
       <div className="d-grid mt-2">
         <a href="tweet.html" className="btn btn-primary btn-block rounded-pill">

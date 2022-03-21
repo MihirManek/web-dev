@@ -1,5 +1,47 @@
 import React from "react";
 import "./PostListItem.css";
+
+const PostContent = ({ content = "Sample Post Content", refs = [] }) => {
+  // let contentToRender = content.split(" ");
+  // if (content.includes("link-ref:")) {
+  //   contentToRender = content.split(" ").map((w) => {
+  //     if (w.startsWith("link-ref:")) {
+  //       let refName = w.split(":")[1];
+  //       let ref = refs.find((r) => r.placeholder === refName);
+  //       if (ref) {
+  //         return (
+  //           <a href={ref.link} target="_blank">
+  //             {ref.text}
+  //           </a>
+  //         );
+  //       }
+  //     }
+  //     return w;
+  //   });
+  // }
+  let contentToRender = content.split(" ");
+  return (
+    <>
+      {contentToRender.map((w, index) => {
+        if (w.startsWith("link-ref:")) {
+          let refName = w.split(":")[1];
+          let ref = refs.find((r) => r.placeholder === refName);
+          if (ref) {
+            return (
+              <>
+                <a href={ref.link} target="_blank">
+                  {ref.text}
+                </a>
+                &nbsp;
+              </>
+            );
+          }
+        }
+        return index === contentToRender.length - 1 ? w : w + " ";
+      })}
+    </>
+  );
+};
 const PostItem = ({
   post = {
     avatarImage:
@@ -8,17 +50,23 @@ const PostItem = ({
     handle: "elonmusk",
     verified: true,
     time: "23h",
-    content:
-      "Amazing show about <a href='https://twitter.com/inspiration4x' target='_blank'>@Inspiration4x</a> mission!",
+    content: "Amazing show about link-ref:inspiration mission!",
     preview: {
       image:
-        "https://pbs.twimg.com/card_img/1494914144826499072/LSbNuftg?format=jpg&name=small",
+        "https://pbs.twimg.com/card_img/1502243770347266050/Q_aXHNnt?format=jpg&name=small",
       title: "Countdown: Inspiration4 Mission to Space | Netflix Official Site",
       description:
         "From training to launch to landing, this all-access docuseries rides along with the Inspiration4 crew on the first all-civilian orbital space mission.",
       link: "netflix.com",
       refLink: "https://t.co/0nQua4jGiz",
     },
+    refs: [
+      {
+        link: "https://twitter.com/inspiration4x",
+        text: "@Inspiration4x",
+        placeholder: "inspiration",
+      },
+    ],
     comments: "4.2K",
     likes: "37.5K",
     retuits: "3.5K",
@@ -49,7 +97,9 @@ const PostItem = ({
               <i className="fas fa-ellipsis-h text-muted"></i>
             </div>
           </div>
-          <div className="wd-bookmark-text pt-1">{post.content}</div>
+          <div className="wd-bookmark-text pt-1">
+            <PostContent content={post.content} refs={post.refs} />
+          </div>
           {post.preview && (
             <a
               target={post.preview.refLink ? `_blank` : `_self`}
