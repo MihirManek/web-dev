@@ -38,7 +38,7 @@ const tuitsReducer = (state = tuits, action) => {
       });
 
     default:
-      return tuits;
+      return state;
   }
 };
 
