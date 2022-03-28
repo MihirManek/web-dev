@@ -7,16 +7,15 @@ const tuitsReducer = (state = tuits, action) => {
         tuit: action.tuit,
         _id: new Date().getTime() + "",
         postedBy: {
-          username: "ReactJS",
+          username: `${action.profile.firstName} ${action.profile.lastName}`,
         },
-        handle: "ReactJS",
+        handle: action.profile.handle,
         time: "now",
-        avatarImage:
-          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRye0H0xrFuy5NL8B7hzObWUh7ERoU4z-jyOg&usqp=CAU",
+        avatarImage: action.profile.profilePicture,
         stats: {
           retuits: 111,
           likes: 222,
-          replies: 333,
+          comments: 333,
         },
       };
       return [newTuit, ...state];
