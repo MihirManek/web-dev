@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import "./NavigationSidebar.css";
 
 const links = [
@@ -17,37 +17,40 @@ const links = [
   },
   {
     id: "notifications",
-    path: "",
+    path: "/",
     label: "Notifications",
     icon: "fa fa-bell",
   },
   {
     id: "messages",
-    path: "",
+    path: "/",
     label: "Messages",
     icon: "fa fa-envelope",
   },
   {
     id: "bookmarks",
-    path: "",
+    path: "/",
     label: "Bookmarks",
     icon: "fa fa-bookmark",
   },
   {
     id: "lists",
-    path: "",
+    path: "/",
     label: "Lists",
     icon: "fa fa-list",
   },
   {
     id: "profile",
-    path: "",
+    path: "/tuiter/profile",
     label: "Profile",
     icon: "fa fa-user",
   },
 ];
 
 const NavigationSidebar = ({ active = "explore" }) => {
+  const { pathname } = useLocation();
+  console.log(pathname);
+  const defaultClasses = "list-group-item list-group-item-action d-flex justify-content-center justify-content-xl-start align-items-center"
   return (
     <>
       <div className="list-group">
@@ -55,17 +58,18 @@ const NavigationSidebar = ({ active = "explore" }) => {
           <i className="fab fa-twitter"></i>
         </Link>
         {links.map((l) => (
-          <Link
+          <NavLink
             key={l.id}
             to={l.path || ""}
-            className={`list-group-item list-group-item-action d-flex justify-content-center justify-content-xl-start align-items-center ${
-              l.id === active ? "active" : ""
-            }`}
+            // className={`list-group-item list-group-item-action d-flex justify-content-center justify-content-xl-start align-items-center ${
+            //   l.id === active ? "active" : ""
+            // }`}
+            className={({ isActive }) => (isActive ? `${defaultClasses} active` : `${defaultClasses}`)}
             aria-current={l.id === active ? "true" : "false"}
           >
             <i className={`${l.icon} me-0 me-xl-2`}></i>
             <span className="d-none d-xl-inline-block">{l.label}</span>
-          </Link>
+          </NavLink>
         ))}
         <Link
           to=""

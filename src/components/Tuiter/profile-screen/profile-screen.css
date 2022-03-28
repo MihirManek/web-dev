@@ -1,0 +1,24 @@
+.wd-banner-container {
+  max-height: 250px;
+  overflow: hidden;
+}
+.wd-profile-banner {
+  max-width: 100%;
+}
+:root {
+  --size: 150px;
+}
+.wd-profile-image {
+  width: var(--size);
+  border: 4px solid black;
+}
+.wd-profile-info {
+  position: absolute;
+  left: 20px;
+  top: calc(-1 * (var(--size) / 2));
+  z-index: 0;
+  width: 80%;
+}
+.wd-button-action {
+  cursor: pointer;
+}

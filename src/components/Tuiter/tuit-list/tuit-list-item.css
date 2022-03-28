@@ -18,7 +18,7 @@
 }
 
 .wd-bookmark .wd-avatar {
-  flex: 0 0 auto;
+  flex: 0 0 inherit;
 }
 
 .wd-bookmark .wd-avatar img {
@@ -29,6 +29,7 @@
 
 .wd-bookmark .wd-bookmark-content {
   margin-left: 12px;
+  flex-grow: 1;
 }
 
 .wd-bookmark .wd-bookmark-content .wd-bookmark-author .wd-handle::after {
@@ -53,6 +54,7 @@
   border: 1px solid rgb(87, 91, 94);
   max-width: 504px;
   background-color: unset;
+  overflow: hidden;
 }
 .wd-bookmark .wd-bookmark-content .wd-bookmark-preview img {
   max-width: 504px;
@@ -88,4 +90,12 @@
 
 .stat {
   width: 60px;
+  cursor: pointer;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
 }
