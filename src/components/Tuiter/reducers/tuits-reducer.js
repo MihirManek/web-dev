@@ -9,6 +9,8 @@ const tuitsReducer = (state = tuits, action) => {
         postedBy: {
           username: "ReactJS",
         },
+        handle: "ReactJS",
+        time: "now",
         avatarImage:
           "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRye0H0xrFuy5NL8B7hzObWUh7ERoU4z-jyOg&usqp=CAU",
         stats: {
