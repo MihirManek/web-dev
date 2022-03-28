@@ -53,7 +53,7 @@ const ProfileScreen = ({ editMode = false }) => {
     }
     console.log(profileData, tempProfile);
     dispatch({ type: "save-profile", profile: tempProfile });
-    navigate("/tuiter/profile");
+    navigate("/tuiter/profile", { replace: true });
   };
 
   return (
