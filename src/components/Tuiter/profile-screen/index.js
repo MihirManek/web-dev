@@ -13,6 +13,7 @@ const ProfileScreen = ({ editMode = false }) => {
     bio: profile.bio,
     location: profile.location,
     dob: new Date(profile.dateOfBirth).toLocaleDateString("en-CA"),
+    website: profile.website,
   });
 
   const handleProfileChange = (evt) => {
@@ -141,6 +142,30 @@ const ProfileScreen = ({ editMode = false }) => {
                     )}
 
                     <div>
+                      {editMode ? (
+                        <div className="form-floating mb-3 ">
+                          <input
+                            type="text"
+                            className="form-control bg-black text-white border border-light rounded"
+                            id="website"
+                            name="website"
+                            placeholder="https://example.com"
+                            value={profileData.website}
+                            onChange={handleProfileChange}
+                          />
+                          <label htmlFor="website">Website</label>
+                        </div>
+                      ) : (
+                        <div className="mb-0">
+                          <a
+                            href={profile.website}
+                            target="_blank"
+                            rel="noreferrer"
+                          >
+                            {profile.website}
+                          </a>
+                        </div>
+                      )}
                       {editMode ? (
                         <div className="form-floating mb-3 ">
                           <textarea

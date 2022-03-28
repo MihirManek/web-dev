@@ -5,7 +5,7 @@ const profileData = {
   profilePicture: "/tuiter-old/me.png",
   bannerPicture: "/tuiter-old/background.jpg",
   bio: "Software Engineer, Tech & Space enthusiast.",
-  website: "youtube.com/webdevtv",
+  website: "https://mihirmanek.gitlab.io/",
   location: "Boston, MA",
   dateOfBirth: "1/1/1990",
   dateJoined: "4/2/2000",
