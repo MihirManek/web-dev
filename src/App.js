@@ -31,7 +31,6 @@ function App() {
                 element={<ProfileScreen editMode={true} />}
               />
               {/* <Route path="notifications" element={<NotificationScreen />} /> */}
-              {/* ... */}
             </Route>
           </Route>
         </Routes>

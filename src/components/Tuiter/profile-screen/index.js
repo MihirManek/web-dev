@@ -238,37 +238,39 @@ const ProfileScreen = ({ editMode = false }) => {
                         </div>
                       </div>
                     )}
-
-                    <div className="d-flex flex-row ">
-                      <div className="d-flex flex-row align-items-baseline me-3">
-                        <div className="h6 mb-0 me-1">
-                          {profile.followingCount}
+                    {!editMode && (
+                      <div className="d-flex flex-row ">
+                        <div className="d-flex flex-row align-items-baseline me-3">
+                          <div className="h6 mb-0 me-1">
+                            {profile.followingCount}
+                          </div>
+                          <div> Following</div>
                         </div>
-                        <div> Following</div>
-                      </div>
-                      <div className="d-flex flex-row align-items-baseline me-3">
-                        <div className="h6 mb-0 me-1">
-                          {profile.followersCount}
+                        <div className="d-flex flex-row align-items-baseline me-3">
+                          <div className="h6 mb-0 me-1">
+                            {profile.followersCount}
+                          </div>
+                          <div> Followers</div>
                         </div>
-                        <div> Followers</div>
                       </div>
-                    </div>
+                    )}
                   </div>
                 </div>
               </div>
               <div className="d-flex flex-row justify-content-end">
-                <Link to="/tuiter/profile/edit">
-                  <button
-                    type="button"
-                    className="btn btn-light rounded-pill m-3 wd-button-action"
-                    style={{ zIndex: 2, position: "relative" }}
-                  >
-                    Edit Profile
-                  </button>
-                </Link>
+                {!editMode && (
+                  <Link to="/tuiter/profile/edit">
+                    <button
+                      type="button"
+                      className="btn btn-light rounded-pill m-3 wd-button-action"
+                      style={{ zIndex: 2, position: "relative" }}
+                    >
+                      Edit Profile
+                    </button>
+                  </Link>
+                )}
               </div>
             </div>
-            <div className=""></div>
           </div>
         </div>
       </div>
