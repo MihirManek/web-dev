@@ -2,11 +2,9 @@ import React from "react";
 import { useDispatch } from "react-redux";
 import "./tuit-list-item.css";
 import TuitStats from "./tuit-stats";
+import { deleteTuit } from "../actions/tuits-actions";
 const TuitListItem = ({ tuit }) => {
   const dispatch = useDispatch();
-  const deleteTuit = (tuit) => {
-    dispatch({ type: "delete-tuit", tuit });
-  };
 
   return (
     <li className="list-group-item d-flex justify-content-between align-items-center">
@@ -30,7 +28,10 @@ const TuitListItem = ({ tuit }) => {
               <div className="wd-post-date text-muted ms-1">{tuit.time}</div>
             </div>
             <div>
-              <i onClick={() => deleteTuit(tuit)} className="fas fa-times"></i>
+              <i
+                onClick={() => deleteTuit(dispatch, tuit)}
+                className="fas fa-times"
+              ></i>
             </div>
           </div>
           <div className="wd-bookmark-text pt-1">{tuit.tuit}</div>
