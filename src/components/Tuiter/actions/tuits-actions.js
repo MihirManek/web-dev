@@ -17,6 +17,7 @@ export const createTuit = async (dispatch, tuit) => {
       retuits: 111,
       likes: 222,
       comments: 333,
+      dislikes: 0
     },
   };
   const newTuit = await service.createTuit(tuitData);
