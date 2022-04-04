@@ -69,7 +69,7 @@ const TuitStats = ({ tuit }) => {
           <div className="wd-icon d-flex align-items-center">
             <i className="fas fa-upload"></i>
           </div>
-          <div className="stat">&nbsp;</div>
+          {/* <div className="stat">&nbsp;</div> */}
         </div>
       </div>
     </div>
