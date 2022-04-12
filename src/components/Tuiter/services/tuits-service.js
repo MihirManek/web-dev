@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_BASE = process.env.REACT_APP_API_BASE_WEB_DEV;
+const API_BASE = process.env.REACT_APP_API_BASE_WEB_DEV_A9 || process.env.REACT_APP_API_BASE_WEB_DEV || 'http://localhost:4000/api';
 const TUITS_API = `${API_BASE}/tuits`;
 
 export const createTuit = async (tuit) => {

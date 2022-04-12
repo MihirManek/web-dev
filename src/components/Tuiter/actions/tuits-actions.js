@@ -14,9 +14,9 @@ export const createTuit = async (dispatch, tuit) => {
     time: "now",
     avatarImage: tuit.profile.profilePicture,
     stats: {
-      retuits: 111,
-      likes: 222,
-      comments: 333,
+      retuits: 0,
+      likes: 0,
+      comments: 0,
       dislikes: 0
     },
   };
