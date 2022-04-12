@@ -1,13 +1,15 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import "./whats-happening.css";
+import { createTuit } from "../actions/tuits-actions";
 const WhatsHappening = () => {
   let [whatsHappening, setWhatsHappening] = useState("");
   const dispatch = useDispatch();
 
   const profile = useSelector((state) => state.profile);
   const tuitClickHandler = () => {
-    dispatch({ type: "create-tuit", tuit: whatsHappening, profile: profile });
+    // dispatch({ type: "create-tuit", tuit: whatsHappening, profile: profile });
+    createTuit(dispatch, { tuit: whatsHappening, profile });
   };
   return (
     <>

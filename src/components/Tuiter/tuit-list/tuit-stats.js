@@ -1,10 +1,27 @@
 import React from "react";
 import { useDispatch } from "react-redux";
+import { updateTuit } from "../actions/tuits-actions";
 
 const TuitStats = ({ tuit }) => {
   const dispatch = useDispatch();
   const likeTuit = () => {
-    dispatch({ type: "like-tuit", tuit });
+    updateTuit(dispatch, {
+      ...tuit,
+      stats: {
+        ...tuit.stats,
+        likes: tuit.stats.likes + 1,
+      },
+    });
+  };
+
+  const dislikeTuit = () => {
+    updateTuit(dispatch, {
+      ...tuit,
+      stats: {
+        ...tuit.stats,
+        dislikes: tuit.stats.dislikes + 1,
+      },
+    });
   };
   return (
     // <span onClick={likeTuit}>
@@ -34,12 +51,17 @@ const TuitStats = ({ tuit }) => {
       <div className="wd-bookmark-action wd-active wd-like">
         <div className="d-flex justify-content-between" onClick={likeTuit}>
           <div className="wd-icon d-flex align-items-center">
-            {tuit.liked && (
-              <i className="fas fa-heart me-1" style={{ color: "red" }}></i>
-            )}
-            {!tuit.liked && <i className="far fa-heart me-1"></i>}
+            <i className="far fa-thumbs-up me-1"></i>
           </div>
           <div className="stat">{tuit.stats.likes}</div>
+        </div>
+      </div>
+      <div className="wd-bookmark-action wd-active wd-like">
+        <div className="d-flex justify-content-between" onClick={dislikeTuit}>
+          <div className="wd-icon d-flex align-items-center">
+            <i className="far fa-thumbs-down me-1"></i>
+          </div>
+          <div className="stat">{tuit.stats.dislikes}</div>
         </div>
       </div>
       <div className="wd-bookmark-action">
@@ -47,7 +69,7 @@ const TuitStats = ({ tuit }) => {
           <div className="wd-icon d-flex align-items-center">
             <i className="fas fa-upload"></i>
           </div>
-          <div className="stat">&nbsp;</div>
+          {/* <div className="stat">&nbsp;</div> */}
         </div>
       </div>
     </div>
